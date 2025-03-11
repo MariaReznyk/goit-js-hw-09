@@ -1,4 +1,14 @@
-/* Common styles */
+* {
+    box-sizing: border-box;
+}
 
-/* Sections style */
+body {
+    margin: 16px;
+    background-color: #fafafa;
+}
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
