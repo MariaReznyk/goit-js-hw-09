@@ -4,7 +4,7 @@ const form = document.querySelector('.feedback-form');
 const input = form.querySelector('input');
 const textarea = form.querySelector('textarea');
 
-const formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) ?? {};
+let formData = JSON.parse(localStorage.getItem(STORAGE_KEY)) ?? {};
 
 function formLastData(formData) {
   input.value = formData.email ?? '';
@@ -28,6 +28,7 @@ form.addEventListener('submit', event => {
   if (input.value.trim() && textarea.value.trim()) {
     console.log(formData);
     localStorage.removeItem(STORAGE_KEY);
+    formData = {};
     event.currentTarget.reset();
   } else {
     alert('Fill please all fields');
