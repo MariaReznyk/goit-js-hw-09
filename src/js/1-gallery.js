@@ -21,6 +21,8 @@ function createGallery(images) {
 createGallery(images);
 
 const slOptions = {
+  overlay: true,
+  overlayOpacity: 0.8,
   captions: true,
   captionSelector: 'img',
   captionsData: 'alt',
